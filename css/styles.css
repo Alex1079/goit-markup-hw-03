@@ -16,22 +16,66 @@
     line-height: 1.5;
     color: var(--clr-primary-inverted);
   }
+  p, h1, h2, h3, h4 {
+    margin-top: 0;
+  }
   ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
   }
+  .conteiner {
+    width: 100%;
+    max-width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .header-conteiner {
+    display: flex;
+    align-items: center;
+  }
+  
   .page-header {
     padding: 10px;
     width: 1440px;
     text-decoration: none;
   }
-  
+  .header-conteiner {
+    display: flex;
+    align-items: center;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 76px;
+  }
+  .navigation {
+    display: flex;
+    gap: 40px;
+  }
+  .page-addres {
+    display: flex;
+    gap: 40px;
+  }
+  .section {
+    padding: 120px 0;
+  }
+  .secondary-conteiner {
+    display: flex;
+    gap: 24px;
+    width: 264px;
+    flex-basis: calc((100% / 4));
+  }
+    
   .navigation .link {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-  
+    padding: 24px 0;
     letter-spacing: 0.02em;
     text-decoration: none;
+    display: block;
     color: var(--color-primary-dark);
   }
   .navigation .link:hover {
@@ -54,6 +98,12 @@
     text-decoration: none;
     color: var(--color-primary-dark)
   }
+  .page-addres .link {
+    text-decoration: none;
+    padding: 24px 0;
+    display: block;
+  }
+  
   .page-addres .link:hover {
     color: var(--clr-button-on);
   }
@@ -77,10 +127,20 @@
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: var(--clr-primary-inverted);
+    margin: 0 auto 48px;
+    max-width: 496px;
+    text-align: center;
   }
   .hero-image {
     background:var(--color-primary-dark);
+    padding-top: 188px;
+    padding-bottom: 188px;
   }
+  .hero-conteiner {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
   .button-service {
     font-weight: 500;
     letter-spacing: 0.04em;
@@ -89,6 +149,10 @@
     line-height: 1.5;
     color: var(--clr-primary-inverted);
     background-color: var(--color-button-off);
+    cursor: pointer;
+    padding: 16px 32px;
+    border-radius: 4px;
+    border: none;
     cursor: pointer;
   }
   .button-service:hover {
@@ -100,6 +164,7 @@
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
   }
   .img-sl {
     
@@ -110,20 +175,39 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    width: 264px;
   }
   .page-waw-doing {
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     color: var(--color-primary-dark);
+    margin: 72px;
+    justify-content: center;
+    display: flex;
+    padding-top: 0;
   }
   .team {
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     color: var(--color-primary-dark);
-    
+    margin: 72px;
+    justify-content: center;
+    display: flex;
   }
+  .team-conteiner {
+    display: flex;
+    gap: 24px;
+  }
+  .team-item {
+    flex-basis: calc((100% / 4)-72px);
+  }
+  .foto-section {
+    display: flex;
+    gap: 24px;
+  }
+  
   .foto-tim-main-m {
     background: url(man-with-laptop-presenting-something.jpg);
     mix-blend-mode: normal;
@@ -138,23 +222,35 @@
     line-height: 1.11;
     letter-spacing: 0.02em;
     color:var(--color-primary-dark) ;
+    text-align: center;
   }
   .paragraf-p {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-primary);
+    text-align: center;
   }
   .footer-fon {
     background: var(--color-primary-dark);
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .footer-p {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-wiete-foo);
+    width: 264px;
   }
   /* PAGE 2 */
+  .button-portfolio {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    padding-bottom: 72px;
+    padding-top: 96px;
+  }  
   .but-all {
     font-weight: 500;
     font-size: 16px;
@@ -269,12 +365,29 @@
     line-height: 1.5;
     letter-spacing: 0.04em;
   }
+  .name-info {
+    box-sizing: border-box;
+    flex-basis: calc((100% - 48px) / 3);
+    display: list-item;
+  }
+  .service-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-bottom: 120px;
+  }
+  
   .text-name {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--color-primary-dark);
+  }
+  .border-text {
+    border: 1px solid var(--color-wiete-foo);
+    padding-left: 16px;
+    padding-bottom: 48px;
   }
   .paragraf-portfolio {
     font-size: 16px;
