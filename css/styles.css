@@ -17,7 +17,8 @@
     color: var(--clr-primary-inverted);
   }
   p, h1, h2, h3, h4 {
-    margin-top: 0;
+    
+    margin: 0;
   }
   ul {
     margin: 0;
@@ -34,10 +35,19 @@
     display: flex;
     align-items: center;
   }
-  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
   .page-header {
-    padding: 10px;
-    width: 1440px;
     text-decoration: none;
   }
   .header-conteiner {
@@ -61,13 +71,19 @@
   .section {
     padding: 120px 0;
   }
+  .padding-top-non {
+    padding-top: 0px;
+  }
+  .pouring {
+    background-color: var(--clr-background-dark);
+  }
   .secondary-conteiner {
     display: flex;
     gap: 24px;
-    width: 264px;
-    flex-basis: calc((100% / 4));
   }
-    
+  .li-conteiner {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+  }
   .navigation .link {
     font-weight: 500;
     font-size: 16px;
@@ -86,6 +102,7 @@
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-decoration: none;
+    font-style: normal;
     color: var(--color-primary)
   }
   .mail:hover {
@@ -179,29 +196,30 @@
   }
   .page-waw-doing {
     font-size: 36px;
+    text-align: center;
     line-height: 1.11;
     letter-spacing: 0.02em;
     color: var(--color-primary-dark);
-    margin: 72px;
-    justify-content: center;
-    display: flex;
+    margin-bottom: 72px;
     padding-top: 0;
   }
   .team {
     font-size: 36px;
     line-height: 1.11;
+    text-align: center;
     letter-spacing: 0.02em;
     color: var(--color-primary-dark);
-    margin: 72px;
-    justify-content: center;
-    display: flex;
+    margin-bottom: 72px;
   }
   .team-conteiner {
     display: flex;
     gap: 24px;
   }
   .team-item {
-    flex-basis: calc((100% / 4)-72px);
+    flex-basis: calc((100% - 72px) / 4);
+    background: var(--clr-primary-inverted);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
   }
   .foto-section {
     display: flex;
@@ -215,6 +233,10 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+  }
+  .employee {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
   .piple {
     font-weight: 500;
@@ -242,16 +264,21 @@
     letter-spacing: 0.02em;
     color: var(--color-wiete-foo);
     width: 264px;
+    margin-top: 16px;
+    margin-bottom: 0;
   }
   /* PAGE 2 */
   .button-portfolio {
     display: flex;
     gap: 24px;
     justify-content: center;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
+  }
+  .section-button {
     padding-top: 96px;
-  }  
+  }
   .but-all {
+    padding: 12px 24px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -369,14 +396,16 @@
     box-sizing: border-box;
     flex-basis: calc((100% - 48px) / 3);
     display: list-item;
+    
   }
   .service-conteiner {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 48px 24px;
+  }
+  .section-presentation {
     padding-bottom: 120px;
   }
-  
   .text-name {
     font-weight: 500;
     font-size: 20px;
@@ -387,7 +416,9 @@
   .border-text {
     border: 1px solid var(--color-wiete-foo);
     padding-left: 16px;
-    padding-bottom: 48px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 8px;
   }
   .paragraf-portfolio {
     font-size: 16px;
@@ -395,6 +426,9 @@
     letter-spacing: 0.02em;
     color: var(--color-primary);
   }  
-  .portfolio-img {
+  .portfolio-img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
     mix-blend-mode: normal;
   }
