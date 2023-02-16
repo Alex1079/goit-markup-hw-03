@@ -49,6 +49,7 @@
   }
   .page-header {
     text-decoration: none;
+    border-bottom: 1px solid var(--color-wiete-foo);
   }
   .header-conteiner {
     display: flex;
@@ -245,6 +246,7 @@
     letter-spacing: 0.02em;
     color:var(--color-primary-dark) ;
     text-align: center;
+    margin-bottom: 8px;
   }
   .paragraf-p {
     font-size: 16px;
@@ -302,12 +304,14 @@
   }
   .but {
     font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--color-button-off);
     background: var(--clr-background-dark);
     border: 1px solid var(--color-wiete-foo);
     border-radius: 4px;
+    padding: 12px 24px;
   }
   .but:hover {
     background: var(--clr-button-on);
@@ -393,7 +397,6 @@
     letter-spacing: 0.04em;
   }
   .name-info {
-    box-sizing: border-box;
     flex-basis: calc((100% - 48px) / 3);
     display: list-item;
     
@@ -405,6 +408,7 @@
   }
   .section-presentation {
     padding-bottom: 120px;
+    padding-top: 96px;
   }
   .text-name {
     font-weight: 500;
@@ -412,6 +416,7 @@
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--color-primary-dark);
+    margin-bottom: 8px;
   }
   .border-text {
     border: 1px solid var(--color-wiete-foo);
